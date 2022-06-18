@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 
 
 class sonucEkrani extends StatefulWidget {
-  const sonucEkrani({Key? key}) : super(key: key);
+
+  bool sonuc;
+  sonucEkrani({required this.sonuc});
 
   @override
   State<sonucEkrani> createState() => _sonucEkraniState();
 }
 
 class _sonucEkraniState extends State<sonucEkrani> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,19 +25,8 @@ class _sonucEkraniState extends State<sonucEkrani> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            SizedBox(
-              width: 200,
-                height: 200,
-                child: Image.asset("Images/sad.png")
-            ),
-            Text("Oyunu Kaybettin :(",
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.w500,
-                color: Colors.deepOrange,
-              ),
-            ),
-
+            widget.sonuc ? SizedBox(width: 200, height: 200, child: Image.asset("Images/smile.png")) : SizedBox(width: 200, height: 200, child: Image.asset("Images/sad.png")),
+             Text(widget.sonuc ? "Oyunu Kazandın":"Oyunu Kaybettin", style: TextStyle(fontSize: 32, fontWeight: FontWeight.w500, color: Colors.deepOrange,),),
             SizedBox(
               width: 200,
               height: 50,
@@ -53,6 +47,7 @@ class _sonucEkraniState extends State<sonucEkrani> {
 
                 ),
                 onPressed:(){
+                  Navigator.pop(context);
                 },
               ),
             ),
