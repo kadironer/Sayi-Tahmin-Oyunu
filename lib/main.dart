@@ -35,6 +35,7 @@ class _AnasayfaState extends State<Anasayfa> {
           children: <Widget>[
             Container(
               color: Colors.amberAccent,
+              width: 100,
             )
           ],
         ),
