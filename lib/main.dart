@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sayi_tahmin_oyunu/tahminEkrani.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.deepOrange,
       ),
       home: Anasayfa(),
     );
@@ -34,9 +35,45 @@ class _AnasayfaState extends State<Anasayfa> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            
+            Text("Sayı Tahmin Oyunu",
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w500,
+                color: Colors.deepOrange,
+              ),
+            ),
+            SizedBox(
+              width: 200,
+                height: 200,
+                child: Image.asset("Images/dice.png"),
+            ),
+            SizedBox(
+              width: 200,
+              height: 50,
+              child: ElevatedButton(
+                child: Text("Oyuna Başla",
+                  style: TextStyle(
+                  fontSize: 20,
+
+                ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.deepOrange,
+                  shadowColor: Colors.black,
+                  elevation: 10,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(45.0)),
+                  ),
+
+                ),
+                onPressed:(){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>tahminEkrani()));
+
+                },
+              ),
+            ),
           ],
         ),
       ),

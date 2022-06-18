@@ -11,6 +11,17 @@ class _tahminEkraniState extends State<tahminEkrani> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Tahmin Et"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+
+          ],
+        ),
+      ),
 
     );
   }
