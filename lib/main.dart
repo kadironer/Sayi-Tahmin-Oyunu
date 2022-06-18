@@ -36,6 +36,7 @@ class _AnasayfaState extends State<Anasayfa> {
             Container(
               color: Colors.amberAccent,
               width: 100,
+              height: 100,
             )
           ],
         ),
