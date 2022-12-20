@@ -14,13 +14,13 @@ class _tahminEkraniState extends State<tahminEkrani> {
 
   var tfConrol=TextEditingController();
   int rastgeleSayi=0;
-  int kalanHak=5;
+  int kalanHak=6;
   String ipucu="";
 
   @override
   void initState() {
     super.initState();
-    rastgeleSayi=Random().nextInt(101);
+    rastgeleSayi=Random().nextInt(51);
     print("Rastgele Sayı:$rastgeleSayi");
   }
 
@@ -28,21 +28,23 @@ class _tahminEkraniState extends State<tahminEkrani> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tahmin Et"),
+        title: const Text("Tahmin Et"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text("Kalan Hak:$kalanHak",
-              style: TextStyle(
+            Text("Kalan Hak:$kalanHak\n(0-50)",
+              style: const TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.w500,
                 color: Colors.deepOrange,
               ),
+              textAlign: TextAlign.center,
             ),
+
             Text("İpucu:$ipucu",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
                 color: Colors.grey,
@@ -55,10 +57,10 @@ class _tahminEkraniState extends State<tahminEkrani> {
                 controller: tfConrol,
                 textAlign: TextAlign.center,
                 keyboardType: TextInputType.number,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                 ),
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: ("Bir sayı giriniz!"),
                   labelText: "Tahmininiz",
                   border: OutlineInputBorder(
@@ -72,17 +74,17 @@ class _tahminEkraniState extends State<tahminEkrani> {
               width: 200,
               height: 50,
               child: ElevatedButton(
-                child: Text("Devam Et",
+                child: const Text("Devam Et",
                   style: TextStyle(
                     fontSize: 20,
 
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.deepOrange,
+                  backgroundColor: Colors.deepOrange,
                   shadowColor: Colors.black,
                   elevation: 10,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(45.0)),
                   ),
 
@@ -110,8 +112,10 @@ class _tahminEkraniState extends State<tahminEkrani> {
                   if(kalanHak==0){
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>sonucEkrani(sonuc: false,)));
                   }
+                  setState(() {
+                    tfConrol.text="";
+                  });
 
-                  tfConrol.text="";
                 },
               ),
             ),

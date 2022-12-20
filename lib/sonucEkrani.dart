@@ -38,7 +38,7 @@ class _sonucEkraniState extends State<sonucEkrani> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.deepOrange,
+                  backgroundColor: Colors.deepOrange,
                   shadowColor: Colors.black,
                   elevation: 10,
                   shape: RoundedRectangleBorder(
