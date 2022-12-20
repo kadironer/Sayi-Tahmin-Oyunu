@@ -61,7 +61,6 @@ class _tahminEkraniState extends State<tahminEkrani> {
                   fontSize: 20,
                 ),
                 decoration: const InputDecoration(
-                  hintText: ("Bir sayı giriniz!"),
                   labelText: "Tahmininiz",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25.0)),
