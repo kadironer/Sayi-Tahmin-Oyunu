@@ -1,16 +1,14 @@
-# sayi_tahmin_oyunu
 
-A new Flutter project.
+# Sayı Tahmin Oyunu
 
-## Getting Started
+Bu proje, kullanıcının 0 ile 50 arasında rastgele üretilen bir sayıyı tahmin etmesi gereken Flutter kodudur. Kullanıcı bir tahmin girdiğinde ve "Devam Et" düğmesine tıkladığında, kod tahminin doğru olup olmadığını kontrol eder ve sonuç ekranına yeni bir ekran ile yönlendirir. Eğer tahmin yanlışsa, kod kullanıcıya tahminlerini arttırması veya azaltması gerektiğine dair bir ipucu verir ve kalan deneme sayısını 1 azaltır. Eğer kullanıcının deneme hakkı bittiğinde, kod bir başarısızlık sonucu ile sonuç ekranına yönlendirir.
 
-This project is a starting point for a Flutter application.
+## Ekran Görüntüleri
 
-A few resources to get you started if this is your first Flutter project:
+![Uygulama Ekran Görüntüsü](https://github.com/kadironer/Sayi-Tahmin-Oyunu/blob/master/screenShots/1.png?raw=true)
+![Uygulama Ekran Görüntüsü](https://github.com/kadironer/Sayi-Tahmin-Oyunu/blob/master/screenShots/2.png?raw=true)
+![Uygulama Ekran Görüntüsü](https://github.com/kadironer/Sayi-Tahmin-Oyunu/blob/master/screenShots/3.png?raw=true)
+![Uygulama Ekran Görüntüsü](https://github.com/kadironer/Sayi-Tahmin-Oyunu/blob/master/screenShots/4.png?raw=true)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  
